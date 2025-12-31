@@ -1,0 +1,62 @@
+.page {
+  max-width: 760px;
+  margin: 30px auto;
+  padding: 0 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions button {
+  margin-left: 8px;
+}
+
+.error {
+  color: #b00020;
+}
+
+.composer {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 16px 0;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+}
+
+.list .card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 12px 0;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.body {
+  margin-top: 10px;
+  white-space: pre-wrap;
+}
+
+.time {
+  margin-top: 10px;
+  opacity: 0.7;
+  font-size: 12px;
+}

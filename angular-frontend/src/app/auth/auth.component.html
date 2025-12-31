@@ -1,0 +1,32 @@
+<div class="card">
+  <h1>MySMS Messenger</h1>
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  <label>
+    Email
+    <input [(ngModel)]="email" type="email" />
+  </label>
+
+  <label>
+    Password
+    <input [(ngModel)]="password" type="password" />
+  </label>
+
+  @if (mode === 'signup') {
+    <label>
+      Confirm Password
+      <input [(ngModel)]="passwordConfirmation" type="password" />
+    </label>
+  }
+
+  <button (click)="submit()">
+    {{ mode === 'login' ? 'Login' : 'Sign up' }}
+  </button>
+
+  <button class="link" (click)="toggleMode()">
+    {{ mode === 'login' ? 'Need an account? Sign up' : 'Have an account? Login' }}
+  </button>
+</div>
