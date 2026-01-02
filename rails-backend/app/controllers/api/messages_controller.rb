@@ -1,5 +1,5 @@
 class Api::MessagesController < ApplicationController
-  # before_action :authenticate_api_user!
+  before_action :authenticate_user!
 
   def index
     messages = current_user.messages.order_by(created_at: :desc).limit(100)
@@ -12,13 +12,11 @@ class Api::MessagesController < ApplicationController
       body: params.require(:body),
       from_number: ENV.fetch("TWILIO_FROM_NUMBER")
     )
-    Rails.logger.info "B"
-    Rails.logger.info msg.inspect
     result = TwilioSendSmsService.call(
       to: msg.to_number,
       from: msg.from_number,
       body: msg.body,
-      # status_callback: ENV["TWILIO_STATUS_CALLBACK_URL"]
+      status_callback: ENV["TWILIO_STATUS_CALLBACK_URL"]
     )
 
     msg.set(twilio_sid: result[:sid], status: result[:status])
@@ -30,10 +28,6 @@ class Api::MessagesController < ApplicationController
   end
 
   private
-
-  def current_user
-    User.last
-  end
 
   def serialize(m)
     {

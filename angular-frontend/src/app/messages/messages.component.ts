@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -26,7 +26,8 @@ export class MessagesComponent implements OnInit {
   constructor(
     private messagesService: MessagesService,
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -39,6 +40,7 @@ export class MessagesComponent implements OnInit {
     this.messagesService.list().subscribe({
       next: (r) => {
         this.messages = r.messages ?? [];
+          this.cdr.detectChanges();
       },
       error: (err) => {
         this.error =
@@ -64,6 +66,7 @@ export class MessagesComponent implements OnInit {
         if (r?.message) {
           // Prepend for instant UX
           this.messages = [r.message, ...this.messages];
+          this.cdr.detectChanges();
         }
       },
       error: (err) => {

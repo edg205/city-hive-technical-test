@@ -28,10 +28,13 @@ export class AuthComponent {
     this.error = null;
 
     const onSuccess = () => {
+      console.log("i'm in");
       this.router.navigateByUrl('/messages');
     };
 
     const onError = (err: any) => {
+      console.log("i'm not in");
+      console.log(err?.error?.error?.message);
       this.error =
         err?.error?.error?.message ||
         err?.error?.message ||

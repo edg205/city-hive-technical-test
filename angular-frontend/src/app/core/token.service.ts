@@ -8,12 +8,8 @@ export class TokenService {
     return localStorage.getItem(KEY);
   }
 
-  set(token: string | null) {
-    if (!token) localStorage.removeItem(KEY);
-    else localStorage.setItem(KEY, token);
-  }
-
-  isLoggedIn(): boolean {
-    return !!this.get();
+  set(token: string | null): void {
+    if (token) localStorage.setItem(KEY, token);
+    else localStorage.removeItem(KEY);
   }
 }

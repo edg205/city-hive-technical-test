@@ -9,8 +9,6 @@ class Message
   field :status,      type: String, default: "created"
   field :error_code,  type: Integer
 
-  belongs_to :user
-
   index({ user_id: 1, created_at: -1 })
   index({ twilio_sid: 1 })
 

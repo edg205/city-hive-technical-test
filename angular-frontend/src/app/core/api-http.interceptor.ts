@@ -3,8 +3,9 @@ import { inject } from '@angular/core';
 import { TokenService } from './token.service';
 
 export const apiHttpInterceptor: HttpInterceptorFn = (req, next) => {
-  const tokenService = inject(TokenService);
-  const jwt = tokenService.get();
+  const jwt = inject(TokenService).get();
+
+  console.log('[interceptor]', req.method, req.url, 'jwt?', !!jwt); // TEMP DEBUG
 
   if (!jwt) return next(req);
 
