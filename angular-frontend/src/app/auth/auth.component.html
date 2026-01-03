@@ -1,32 +1,93 @@
-<div class="card">
+<div class="card" role="region" aria-label="Authentication">
   <h1>MySMS Messenger</h1>
 
-  @if (error) {
-    <p class="error">{{ error }}</p>
+  @if (error()) {
+    <p class="error" role="alert">{{ error() }}</p>
   }
 
-  <label>
-    Email
-    <input [(ngModel)]="email" type="email" />
-  </label>
-
-  <label>
-    Password
-    <input [(ngModel)]="password" type="password" />
-  </label>
-
-  @if (mode === 'signup') {
+  <form (ngSubmit)="submit()" novalidate>
     <label>
-      Confirm Password
-      <input [(ngModel)]="passwordConfirmation" type="password" />
+      Email
+      <input
+        name="email"
+        type="email"
+        autocomplete="email"
+        inputmode="email"
+        required
+
+        [ngModel]="email()"
+        (ngModelChange)="email.set($event)"
+        (blur)="touchedEmail.set(true)"
+
+        [attr.aria-invalid]="showEmailHint() ? 'true' : null"
+        aria-describedby="emailHint"
+      />
     </label>
-  }
+    <p id="emailHint" class="hint" [class.visible]="showEmailHint()">
+      Email is required.
+    </p>
 
-  <button (click)="submit()">
-    {{ mode === 'login' ? 'Login' : 'Sign up' }}
-  </button>
+    <label>
+      Password
+      <input
+        name="password"
+        type="password"
+        autocomplete="current-password"
+        required
 
-  <button class="link" (click)="toggleMode()">
-    {{ mode === 'login' ? 'Need an account? Sign up' : 'Have an account? Login' }}
-  </button>
+        [ngModel]="password()"
+        (ngModelChange)="password.set($event)"
+        (blur)="touchedPassword.set(true)"
+
+        [attr.aria-invalid]="showPasswordHint() ? 'true' : null"
+        aria-describedby="passwordHint"
+      />
+    </label>
+    <p id="passwordHint" class="hint" [class.visible]="showPasswordHint()">
+      Password is required.
+    </p>
+
+    @if (isSignup()) {
+      <label>
+        Confirm Password
+        <input
+          name="passwordConfirmation"
+          type="password"
+          autocomplete="new-password"
+          required
+
+          [ngModel]="passwordConfirmation()"
+          (ngModelChange)="passwordConfirmation.set($event)"
+          (blur)="touchedPasswordConfirmation.set(true)"
+
+          [attr.aria-invalid]="showPasswordConfirmHint() ? 'true' : null"
+          aria-describedby="confirmHint"
+        />
+      </label>
+      <p id="confirmHint" class="hint" [class.visible]="showPasswordConfirmHint()">
+        Passwords must match.
+      </p>
+    }
+
+    <button
+      type="submit"
+      [disabled]="!canSubmit()"
+      [attr.aria-busy]="submitting()"
+    >
+      @if (mode() === 'login') {
+        {{ submitting() ? 'Logging in…' : 'Login' }}
+      } @else {
+        {{ submitting() ? 'Signing up…' : 'Sign up' }}
+      }
+    </button>
+
+    <button
+      type="button"
+      class="link"
+      (click)="toggleMode()"
+      [disabled]="submitting()"
+    >
+      {{ mode() === 'login' ? 'Need an account? Sign up' : 'Have an account? Login' }}
+    </button>
+  </form>
 </div>

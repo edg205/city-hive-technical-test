@@ -6,6 +6,8 @@ module Users
       build_resource(sign_up_params)
 
       if resource.save
+        sign_in(resource_name, resource, store: false)
+
         render json: { user: { id: resource.id.to_s, email: resource.email } }, status: :created
       else
         clean_up_passwords resource

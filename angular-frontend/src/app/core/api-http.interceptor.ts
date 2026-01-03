@@ -1,17 +1,28 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { TokenService } from './token.service';
+import { Router } from '@angular/router';
+import { catchError, throwError } from 'rxjs';
+
+import { AuthStore } from './auth.store';
 
 export const apiHttpInterceptor: HttpInterceptorFn = (req, next) => {
-  const jwt = inject(TokenService).get();
+  const auth = inject(AuthStore);
+  const router = inject(Router);
 
-  console.log('[interceptor]', req.method, req.url, 'jwt?', !!jwt); // TEMP DEBUG
+  const jwt = auth.token();
 
-  if (!jwt) return next(req);
+  const reqWithAuth = jwt
+    ? req.clone({ setHeaders: { Authorization: `Bearer ${jwt}` } })
+    : req;
 
-  return next(
-    req.clone({
-      setHeaders: { Authorization: `Bearer ${jwt}` }
+  return next(reqWithAuth).pipe(
+    catchError((err) => {
+      // Central handling for expired/revoked tokens
+      if (err?.status === 401) {
+        auth.clear();
+        router.navigateByUrl('/auth');
+      }
+      return throwError(() => err);
     })
   );
 };

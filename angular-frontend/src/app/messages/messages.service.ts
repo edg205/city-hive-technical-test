@@ -1,20 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
+
 import { environment } from '../../environments/environment';
-import { Observable } from 'rxjs';
 import { Message } from '../core/models';
+
+type MessagesIndexResponse = { messages: Message[] } | Message[];
+type MessageCreateResponse = { message: Message } | Message;
 
 @Injectable({ providedIn: 'root' })
 export class MessagesService {
-  private base = environment.apiBaseUrl;
+  private readonly base = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) {}
 
-  list(): Observable<{ messages: Message[] }> {
-    return this.http.get<{ messages: Message[] }>(`${this.base}/api/messages`);
+  list(): Observable<Message[]> {
+    return this.http.get<MessagesIndexResponse>(`${this.base}/api/messages`).pipe(
+      map((res) => (Array.isArray(res) ? res : res.messages ?? []))
+    );
   }
 
-  send(to_number: string, body: string): Observable<{ message: Message }> {
-    return this.http.post<{ message: Message }>(`${this.base}/api/messages`, { to_number, body });
+  create(to_number: string, body: string): Observable<Message> {
+    return this.http
+      .post<MessageCreateResponse>(`${this.base}/api/messages`, { to_number, body })
+      .pipe(map((res) => ('message' in (res as any) ? (res as any).message : (res as Message))));
   }
 }

@@ -1,66 +1,61 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
-import { TokenService } from './token.service';
 import { User } from './models';
+import { AuthStore } from './auth.store';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private base = environment.apiBaseUrl;
+  private readonly base = environment.apiBaseUrl;
 
-  constructor(private http: HttpClient, private token: TokenService) {}
+  constructor(private http: HttpClient, private auth: AuthStore) {}
 
   signup(email: string, password: string, passwordConfirmation: string): Observable<User> {
-    return this.http.post<{ user: User }>(
-      `${this.base}/signup`,
-      { user: { email, password, password_confirmation: passwordConfirmation } },
-      { observe: 'response' }
-    ).pipe(
-      map((resp: HttpResponse<{ user: User }>) => {
-        this.storeJwt(resp);
-        return resp.body!.user;
-      })
-    );
+    return this.http
+      .post<User>(
+        `${this.base}/signup`,
+        { user: { email, password, password_confirmation: passwordConfirmation } },
+        { observe: 'response' }
+      )
+      .pipe(
+        tap((resp) => this.storeJwt(resp)),
+        map((resp) => resp.body as User)
+      );
   }
 
   login(email: string, password: string): Observable<User> {
-    return this.http.post<{ user: User }>(
-      `${this.base}/login`,
-      { user: { email, password } },
-      { observe: 'response' }
-    ).pipe(
-      map((resp: HttpResponse<{ user: User }>) => {
-        this.storeJwt(resp);
-        return resp.body!.user;
-      })
-    );
+    return this.http
+      .post<User>(
+        `${this.base}/login`,
+        { user: { email, password } },
+        { observe: 'response' }
+      )
+      .pipe(
+        tap((resp) => this.storeJwt(resp)),
+        map((resp) => resp.body as User)
+      );
   }
 
   logout(): Observable<void> {
     return this.http.delete<void>(`${this.base}/logout`).pipe(
-      map(() => {
-        this.token.set(null);
-        return;
-      })
+      tap(() => this.auth.clear()),
+      map(() => undefined)
     );
   }
 
   private storeJwt(resp: HttpResponse<any>): void {
-    const auth =
+    const header =
       resp.headers.get('Authorization') ||
       resp.headers.get('authorization');
 
-    console.log('[AuthService] auth header:', auth); // TEMP DEBUG
+    if (!header) return;
 
-    if (!auth) return;
-
-    const [type, token] = auth.trim().split(/\s+/);
+    const [type, token] = header.trim().split(/\s+/);
     if (type?.toLowerCase() === 'bearer' && token) {
-      this.token.set(token);
+      this.auth.setToken(token);
     }
   }
-
 }
