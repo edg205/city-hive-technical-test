@@ -2,6 +2,7 @@
 *.rbc
 .env
 .idea
+.DS_Store
 /.config
 /coverage/
 /InstalledFiles
