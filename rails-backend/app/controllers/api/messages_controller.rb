@@ -21,10 +21,12 @@ class Api::MessagesController < ApplicationController
 
     msg.set(twilio_sid: result[:sid], status: result[:status])
     render json: { message: serialize(msg) }, status: :created
+  rescue ActionController::ParameterMissing => e
+    render json: { error: e.message }, status: :unprocessable_entity
   rescue Mongoid::Errors::Validations => e
-    render json: { error: { message: "Validation failed", details: e.document.errors.to_hash } }, status: :unprocessable_entity
+    render json: { errors: e.document.errors.to_hash }, status: :unprocessable_entity
   rescue StandardError => e
-    render json: { error: { message: "Failed to send message", details: e.message } }, status: :bad_gateway
+    render json: { error: e.message }, status: :bad_gateway
   end
 
   private

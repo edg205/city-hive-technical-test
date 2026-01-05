@@ -1,5 +1,12 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+
+# Ensure required ENV vars exist in test (Devise JWT initializer uses fetch).
+ENV['DEVISE_JWT_SECRET_KEY'] ||= 'test_jwt_secret_key'
+ENV['TWILIO_ACCOUNT_SID'] ||= 'AC_TEST'
+ENV['TWILIO_AUTH_TOKEN'] ||= 'twilio_auth_token_test'
+ENV['TWILIO_FROM_NUMBER'] ||= '+15551234567'
+ENV['TWILIO_STATUS_CALLBACK_URL'] ||= 'https://example.test/twilio/status'
+
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
@@ -20,7 +27,7 @@ require 'rspec/rails'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
+Rails.root.glob('spec/support/**/*.rb').sort_by(&:to_s).each { |f| require f }
 
 RSpec.configure do |config|
   # Remove this line to enable support for ActiveRecord
@@ -56,6 +63,9 @@ RSpec.configure do |config|
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
+
+  # Helpers
+  config.include AuthHelpers, type: :request
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
