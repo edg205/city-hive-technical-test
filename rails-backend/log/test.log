@@ -1,0 +1,561 @@
+[dotenv] Set [36mDEVISE_JWT_SECRET_KEY[0m, [36mTWILIO_ACCOUNT_SID[0m, [36mTWILIO_AUTH_TOKEN[0m, [36mTWILIO_TO_NUMBER[0m, [36mTWILIO_FROM_NUMBER[0m, [36mTWILIO_STATUS_CALLBACK_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:3 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x8b6aacefade34185...>}}
+MONGODB | localhost:27017 req:6 | city_hive_messenger_test.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:3 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('695919b3fa9c9e520e8f99dd'), "email" => "test@example.com", "encrypted_password" => "$2a$12$WLVq4qKbNdogt0qgYXBvKelYU7ya0M.qrqJGS97a7PzgSZ5NrNjby", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:7 | city_hive_messenger_test.insert | SUCCEEDED | 0.077s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:29:23 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:8 conn:1:1 sconn:3 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x8b6aacefade34185...>}}
+MONGODB | localhost:27017 req:8 | city_hive_messenger_test.find | SUCCEEDED | 0.018s
+MONGODB | localhost:27017 req:9 conn:1:1 sconn:3 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('695919b3fa9c9e520e8f99dd')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x8b6aacefade3418...
+MONGODB | localhost:27017 req:9 | city_hive_messenger_test.find | SUCCEEDED | 0.000s
+Completed 200 OK in 98ms (Views: 0.3ms | MongoDB: 18.7ms | GC: 5.8ms)
+MONGODB | localhost:27017 req:10 conn:1:1 sconn:3 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x8b6aacefade34185...>}}
+MONGODB | localhost:27017 req:10 | city_hive_messenger_test.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 req:11 conn:1:1 sconn:3 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x8b6aacefade34185...>}}
+MONGODB | localhost:27017 req:11 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:12 conn:1:1 sconn:3 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x8b6aacefade34185...>}}
+MONGODB | localhost:27017 req:12 | city_hive_messenger_test.find | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:3 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x8b6aacefade34185...>}}
+MONGODB | localhost:27017 req:13 | city_hive_messenger_test.find | SUCCEEDED | 0.000s
+[dotenv] Set [36mDEVISE_JWT_SECRET_KEY[0m, [36mTWILIO_ACCOUNT_SID[0m, [36mTWILIO_AUTH_TOKEN[0m, [36mTWILIO_TO_NUMBER[0m, [36mTWILIO_FROM_NUMBER[0m, [36mTWILIO_STATUS_CALLBACK_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:6 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:6 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:6 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:7 | city_hive_messenger_test.drop | SUCCEEDED | 0.009s
+MONGODB | localhost:27017 req:8 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:8 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:9 conn:1:1 sconn:6 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aa8365dfd9bbfa3541d'), "email" => "test@example.com", "encrypted_password" => "$2a$12$mJz/nBljWHiryeTH.hb7dubv1EBU47kBXGOFaamnHye.EiSzN8bb.", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:9 | city_hive_messenger_test.insert | SUCCEEDED | 0.032s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:33:28 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:10 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:10 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:11 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591aa8365dfd9bbfa3541d')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cc...
+MONGODB | localhost:27017 req:11 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 200 OK in 41ms (Views: 1.1ms | MongoDB: 1.8ms | GC: 1.6ms)
+MONGODB | localhost:27017 req:12 conn:1:1 sconn:6 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:12 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:6 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:13 | city_hive_messenger_test.drop | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:14 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:14 | city_hive_messenger_test.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 req:15 conn:1:1 sconn:6 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aa8365dfd9bbfa3541e'), "email" => "test@example.com", "encrypted_password" => "$2a$12$Soc4zNbhwfvbz9sFVK1NYOGweJtLE0lQPyUbKV1pgIj7fcUc2HKSu", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:15 | city_hive_messenger_test.insert | SUCCEEDED | 0.029s
+MONGODB | localhost:27017 req:16 conn:1:1 sconn:6 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aa8365dfd9bbfa3541f'), "status" => "created", "to_number" => "+15555550001", "body" => "older", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:16 | city_hive_messenger_test.insert | SUCCEEDED | 0.055s
+MONGODB | localhost:27017 req:17 conn:1:1 sconn:6 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aa9365dfd9bbfa35420'), "status" => "created", "to_number" => "+15555550002", "body" => "newer", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:17 | city_hive_messenger_test.insert | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:18 conn:1:1 sconn:6 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591aa8365dfd9bbfa3541f')}, "u" => {"$set" => {"created_at" => 2026-01-01 13:33:29.018993 UTC, "updated_at" => 2026-01-03 13:33:29.020663 UTC}}}], "$db" => "c...
+MONGODB | localhost:27017 req:18 | city_hive_messenger_test.update | SUCCEEDED | 0.035s
+MONGODB | localhost:27017 req:19 conn:1:1 sconn:6 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591aa9365dfd9bbfa35420')}, "u" => {"$set" => {"created_at" => 2026-01-02 13:33:29.061173 UTC, "updated_at" => 2026-01-03 13:33:29.061786 UTC}}}], "$db" => "c...
+MONGODB | localhost:27017 req:19 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:33:29 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:20 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:20 | city_hive_messenger_test.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:21 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591aa8365dfd9bbfa3541e')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cc...
+MONGODB | localhost:27017 req:21 | city_hive_messenger_test.find | SUCCEEDED | 0.007s
+Completed 200 OK in 24ms (Views: 0.2ms | MongoDB: 9.3ms | GC: 10.4ms)
+MONGODB | localhost:27017 req:22 conn:1:1 sconn:6 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:22 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:23 conn:1:1 sconn:6 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:23 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:24 conn:1:1 sconn:6 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:24 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:25 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:25 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:26 conn:1:1 sconn:6 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aa9365dfd9bbfa35421'), "email" => "test@example.com", "encrypted_password" => "$2a$12$70a5UaLYMnfZdoKVJP0fDeWvw.G2DQmHG0UwKoIOCrmmsQPp52yyq", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:26 | city_hive_messenger_test.insert | SUCCEEDED | 0.020s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:33:29 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:27 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:27 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:28 conn:1:1 sconn:6 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aa9365dfd9bbfa35422'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:28 | city_hive_messenger_test.insert | SUCCEEDED | 0.021s
+B
+#<Message _id: 69591aa9365dfd9bbfa35422, created_at: 2026-01-03 13:33:29.472986 UTC, updated_at: 2026-01-03 13:33:29.472986 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591aa9365dfd9bbfa35421')>
+MONGODB | localhost:27017 req:29 conn:1:1 sconn:6 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591aa9365dfd9bbfa35422')}, "u" => {"$set" => {"twilio_sid" => "SM_TEST_123", "status" => "queued"}}}], "$db" => "city_hive_messenger_test", "lsid" => {"id" =...
+MONGODB | localhost:27017 req:29 | city_hive_messenger_test.update | SUCCEEDED | 0.003s
+Completed 201 Created in 31ms (Views: 0.1ms | MongoDB: 25.3ms | GC: 0.6ms)
+MONGODB | localhost:27017 req:30 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"_id" => BSON::ObjectId('69591aa9365dfd9bbfa35422')}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:30 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:31 conn:1:1 sconn:6 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:31 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:32 conn:1:1 sconn:6 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:32 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:33 conn:1:1 sconn:6 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:33 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:34 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:34 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:35 conn:1:1 sconn:6 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aa9365dfd9bbfa35423'), "email" => "test@example.com", "encrypted_password" => "$2a$12$2.bNXS/AX9CXNdfub9vjO.yXtohCEuqAstlycqzWHTXWYXIkf.jKG", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:35 | city_hive_messenger_test.insert | SUCCEEDED | 0.027s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:33:29 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "", "message" => {"to_number" => ""}}
+MONGODB | localhost:27017 req:36 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:36 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 502 Bad Gateway in 2ms (Views: 0.1ms | MongoDB: 0.6ms | GC: 0.0ms)
+MONGODB | localhost:27017 req:37 conn:1:1 sconn:6 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:37 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:38 conn:1:1 sconn:6 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:38 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:39 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:39 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:40 conn:1:1 sconn:6 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aaa365dfd9bbfa35424'), "email" => "test@example.com", "encrypted_password" => "$2a$12$v7EzihmtAGoLkyNQvkNOE.5K6WopzrYctA3H/86K4aJK5Lb5Yg7Xy", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:40 | city_hive_messenger_test.insert | SUCCEEDED | 0.024s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:33:30 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:41 conn:1:1 sconn:6 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0x589a85d5cd6b4cca...>}}
+MONGODB | localhost:27017 req:41 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:42 conn:1:1 sconn:6 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aaa365dfd9bbfa35425'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:42 | city_hive_messenger_test.insert | SUCCEEDED | 0.025s
+B
+#<Message _id: 69591aaa365dfd9bbfa35425, created_at: 2026-01-03 13:33:30.086664 UTC, updated_at: 2026-01-03 13:33:30.086664 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591aaa365dfd9bbfa35424')>
+Completed 502 Bad Gateway in 31ms (Views: 0.1ms | MongoDB: 26.0ms | GC: 0.0ms)
+[dotenv] Set [36mDEVISE_JWT_SECRET_KEY[0m, [36mTWILIO_ACCOUNT_SID[0m, [36mTWILIO_AUTH_TOKEN[0m, [36mTWILIO_TO_NUMBER[0m, [36mTWILIO_FROM_NUMBER[0m, [36mTWILIO_STATUS_CALLBACK_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:9 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:6 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:9 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:7 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:8 conn:1:1 sconn:9 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:8 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:9 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:9 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:10 conn:1:1 sconn:9 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aea5ac5117248491b7c'), "email" => "test@example.com", "encrypted_password" => "$2a$12$MK9o.wKJ62SKyBe2WvuJjuYpdg9NidfXTNuYIAf8RTJ75t6JT80OW", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:10 | city_hive_messenger_test.insert | SUCCEEDED | 0.031s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:34:34 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:11 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:11 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:12 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591aea5ac5117248491b7c')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4df...
+MONGODB | localhost:27017 req:12 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 200 OK in 44ms (Views: 0.8ms | MongoDB: 2.6ms | GC: 8.0ms)
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:9 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:13 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:14 conn:1:1 sconn:9 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:14 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:15 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:15 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:16 conn:1:1 sconn:9 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aea5ac5117248491b7d'), "email" => "test@example.com", "encrypted_password" => "$2a$12$MyPvIoIdC9r.lborwoWPgOGWTPUHWDzW/Bbnt9kHpz9trEHl6K/1W", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:16 | city_hive_messenger_test.insert | SUCCEEDED | 0.024s
+MONGODB | localhost:27017 req:17 conn:1:1 sconn:9 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aea5ac5117248491b7e'), "status" => "created", "to_number" => "+15555550001", "body" => "older", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:17 | city_hive_messenger_test.insert | SUCCEEDED | 0.025s
+MONGODB | localhost:27017 req:18 conn:1:1 sconn:9 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aea5ac5117248491b7f'), "status" => "created", "to_number" => "+15555550002", "body" => "newer", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:18 | city_hive_messenger_test.insert | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:19 conn:1:1 sconn:9 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591aea5ac5117248491b7e')}, "u" => {"$set" => {"created_at" => 2026-01-01 13:34:34.461518 UTC, "updated_at" => 2026-01-03 13:34:34.462823 UTC}}}], "$db" => "c...
+MONGODB | localhost:27017 req:19 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:20 conn:1:1 sconn:9 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591aea5ac5117248491b7f')}, "u" => {"$set" => {"created_at" => 2026-01-02 13:34:34.466248 UTC, "updated_at" => 2026-01-03 13:34:34.468686 UTC}}}], "$db" => "c...
+MONGODB | localhost:27017 req:20 | city_hive_messenger_test.update | SUCCEEDED | 0.005s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:34:34 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:21 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:21 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:22 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591aea5ac5117248491b7d')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4df...
+MONGODB | localhost:27017 req:22 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 200 OK in 9ms (Views: 0.2ms | MongoDB: 1.6ms | GC: 2.2ms)
+MONGODB | localhost:27017 req:23 conn:1:1 sconn:9 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:23 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:24 conn:1:1 sconn:9 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:24 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:25 conn:1:1 sconn:9 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:25 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:26 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:26 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:27 conn:1:1 sconn:9 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aea5ac5117248491b80'), "email" => "test@example.com", "encrypted_password" => "$2a$12$0vBSjHw9CLoFUAP1ADxw6u/cEMhOfw.VYTvVPh3K6BWFNVxug18Lq", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:27 | city_hive_messenger_test.insert | SUCCEEDED | 0.023s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:34:34 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:28 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:28 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:29 conn:1:1 sconn:9 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aea5ac5117248491b81'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:29 | city_hive_messenger_test.insert | SUCCEEDED | 0.024s
+B
+#<Message _id: 69591aea5ac5117248491b81, created_at: 2026-01-03 13:34:34.767815 UTC, updated_at: 2026-01-03 13:34:34.767815 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591aea5ac5117248491b80')>
+MONGODB | localhost:27017 req:30 conn:1:1 sconn:9 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591aea5ac5117248491b81')}, "u" => {"$set" => {"twilio_sid" => "SM_TEST_123", "status" => "queued"}}}], "$db" => "city_hive_messenger_test", "lsid" => {"id" =...
+MONGODB | localhost:27017 req:30 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+Completed 201 Created in 33ms (Views: 0.2ms | MongoDB: 25.6ms | GC: 0.7ms)
+MONGODB | localhost:27017 req:31 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"_id" => BSON::ObjectId('69591aea5ac5117248491b81')}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:31 | city_hive_messenger_test.find | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:32 conn:1:1 sconn:9 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:32 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:33 conn:1:1 sconn:9 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:33 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:34 conn:1:1 sconn:9 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:34 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:35 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:35 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:36 conn:1:1 sconn:9 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aeb5ac5117248491b82'), "email" => "test@example.com", "encrypted_password" => "$2a$12$dOhj5GrJepeX6.dpcYn5MuHypHlIR33pTBOH6BYRFFab/4Jz24dZK", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:36 | city_hive_messenger_test.insert | SUCCEEDED | 0.022s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:34:35 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "", "message" => {"to_number" => ""}}
+MONGODB | localhost:27017 req:37 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:37 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 502 Bad Gateway in 2ms (Views: 0.1ms | MongoDB: 0.6ms | GC: 0.0ms)
+MONGODB | localhost:27017 req:38 conn:1:1 sconn:9 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:38 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:39 conn:1:1 sconn:9 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:39 | city_hive_messenger_test.drop | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:40 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:40 | city_hive_messenger_test.find | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:41 conn:1:1 sconn:9 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aeb5ac5117248491b83'), "email" => "test@example.com", "encrypted_password" => "$2a$12$KvbceonaVUqkepAh518cZugL3TUe9c7xGVYtgp4oPZGpCKHXjiJ8q", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:41 | city_hive_messenger_test.insert | SUCCEEDED | 0.025s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:34:35 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:42 conn:1:1 sconn:9 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5648 type=uuid data=0xddafa2cc7fcd4dfc...>}}
+MONGODB | localhost:27017 req:42 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:43 conn:1:1 sconn:9 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591aeb5ac5117248491b84'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:43 | city_hive_messenger_test.insert | SUCCEEDED | 0.032s
+B
+#<Message _id: 69591aeb5ac5117248491b84, created_at: 2026-01-03 13:34:35.363988 UTC, updated_at: 2026-01-03 13:34:35.363988 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591aeb5ac5117248491b83')>
+Completed 502 Bad Gateway in 37ms (Views: 0.1ms | MongoDB: 32.3ms | GC: 0.6ms)
+[dotenv] Set [36mDEVISE_JWT_SECRET_KEY[0m, [36mTWILIO_ACCOUNT_SID[0m, [36mTWILIO_AUTH_TOKEN[0m, [36mTWILIO_TO_NUMBER[0m, [36mTWILIO_FROM_NUMBER[0m, [36mTWILIO_STATUS_CALLBACK_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:12 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:6 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:12 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:7 | city_hive_messenger_test.drop | SUCCEEDED | 0.021s
+MONGODB | localhost:27017 req:8 conn:1:1 sconn:12 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:8 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:9 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:9 | city_hive_messenger_test.find | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:10 conn:1:1 sconn:12 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591b6f92e26d392c8acdcd'), "email" => "test@example.com", "encrypted_password" => "$2a$12$is3YxTlw9wvbswpec4d3PO2Gpm5PwM.6Poy1GDbfOaT..IPZkU13u", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:10 | city_hive_messenger_test.insert | SUCCEEDED | 0.029s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:36:47 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:11 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:11 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:12 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591b6f92e26d392c8acdcd')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fe...
+MONGODB | localhost:27017 req:12 | city_hive_messenger_test.find | SUCCEEDED | 0.000s
+Completed 200 OK in 38ms (Views: 0.8ms | MongoDB: 0.9ms | GC: 6.0ms)
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:12 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:13 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:14 conn:1:1 sconn:12 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:14 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:15 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:15 | city_hive_messenger_test.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:16 conn:1:1 sconn:12 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591b6f92e26d392c8acdce'), "email" => "test@example.com", "encrypted_password" => "$2a$12$UniJmhAUzo8y7miER6M79O0iMH5l2f5AT5DyVvXlcsc5gwQYIYDc2", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:16 | city_hive_messenger_test.insert | SUCCEEDED | 0.023s
+MONGODB | localhost:27017 req:17 conn:1:1 sconn:12 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591b6f92e26d392c8acdcf'), "status" => "created", "to_number" => "+15555550001", "body" => "older", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:17 | city_hive_messenger_test.insert | SUCCEEDED | 0.020s
+MONGODB | localhost:27017 req:18 conn:1:1 sconn:12 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591b6f92e26d392c8acdd0'), "status" => "created", "to_number" => "+15555550002", "body" => "newer", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:18 | city_hive_messenger_test.insert | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:19 conn:1:1 sconn:12 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591b6f92e26d392c8acdcf')}, "u" => {"$set" => {"created_at" => 2026-01-01 13:36:47.463821 UTC, "updated_at" => 2026-01-03 13:36:47.464369 UTC}}}], "$db" => "c...
+MONGODB | localhost:27017 req:19 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:20 conn:1:1 sconn:12 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591b6f92e26d392c8acdd0')}, "u" => {"$set" => {"created_at" => 2026-01-02 13:36:47.47091 UTC, "updated_at" => 2026-01-03 13:36:47.471347 UTC}}}], "$db" => "ci...
+MONGODB | localhost:27017 req:20 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:36:47 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:21 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:21 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:22 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591b6f92e26d392c8acdce')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fe...
+MONGODB | localhost:27017 req:22 | city_hive_messenger_test.find | SUCCEEDED | 0.002s
+Completed 200 OK in 18ms (Views: 0.2ms | MongoDB: 2.6ms | GC: 9.7ms)
+MONGODB | localhost:27017 req:23 conn:1:1 sconn:12 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:23 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:24 conn:1:1 sconn:12 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:24 | city_hive_messenger_test.drop | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:25 conn:1:1 sconn:12 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:25 | city_hive_messenger_test.drop | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:26 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:26 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:27 conn:1:1 sconn:12 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591b6f92e26d392c8acdd1'), "email" => "test@example.com", "encrypted_password" => "$2a$12$T8l/4gARR5dhgRDe/cC5S.fvfMXcJvNI4dWm2ypGUYEJXT/wtyzNq", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:27 | city_hive_messenger_test.insert | SUCCEEDED | 0.029s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:36:47 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:28 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:28 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:29 conn:1:1 sconn:12 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591b6f92e26d392c8acdd2'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:29 | city_hive_messenger_test.insert | SUCCEEDED | 0.027s
+B
+#<Message _id: 69591b6f92e26d392c8acdd2, created_at: 2026-01-03 13:36:47.748441 UTC, updated_at: 2026-01-03 13:36:47.748441 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591b6f92e26d392c8acdd1')>
+MONGODB | localhost:27017 req:30 conn:1:1 sconn:12 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591b6f92e26d392c8acdd2')}, "u" => {"$set" => {"twilio_sid" => "SM_TEST_123", "status" => "queued"}}}], "$db" => "city_hive_messenger_test", "lsid" => {"id" =...
+MONGODB | localhost:27017 req:30 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+Completed 201 Created in 37ms (Views: 0.1ms | MongoDB: 28.7ms | GC: 0.6ms)
+MONGODB | localhost:27017 req:31 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"_id" => BSON::ObjectId('69591b6f92e26d392c8acdd2')}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:31 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:32 conn:1:1 sconn:12 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:32 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:33 conn:1:1 sconn:12 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:33 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:34 conn:1:1 sconn:12 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:34 | city_hive_messenger_test.drop | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:35 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:35 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:36 conn:1:1 sconn:12 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591b6f92e26d392c8acdd3'), "email" => "test@example.com", "encrypted_password" => "$2a$12$PPE22YiCuykveJoRA7fQ.OiRqbEqhuV7nedVa31EXAyHSwgNHltF6", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:36 | city_hive_messenger_test.insert | SUCCEEDED | 0.025s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:36:48 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "", "message" => {"to_number" => ""}}
+MONGODB | localhost:27017 req:37 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:37 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 502 Bad Gateway in 3ms (Views: 0.1ms | MongoDB: 0.6ms | GC: 0.4ms)
+MONGODB | localhost:27017 req:38 conn:1:1 sconn:12 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:38 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:39 conn:1:1 sconn:12 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:39 | city_hive_messenger_test.drop | SUCCEEDED | 0.005s
+MONGODB | localhost:27017 req:40 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:40 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:41 conn:1:1 sconn:12 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591b7092e26d392c8acdd4'), "email" => "test@example.com", "encrypted_password" => "$2a$12$wiFtOvCBey2f.ZFeVGKhKey0XWjz0kRiIbv0QODrGRCSCE8VXFvGa", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:41 | city_hive_messenger_test.insert | SUCCEEDED | 0.026s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:36:48 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:42 conn:1:1 sconn:12 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x99c2d47d7a474fee...>}}
+MONGODB | localhost:27017 req:42 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:43 conn:1:1 sconn:12 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591b7092e26d392c8acdd5'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:43 | city_hive_messenger_test.insert | SUCCEEDED | 0.024s
+B
+#<Message _id: 69591b7092e26d392c8acdd5, created_at: 2026-01-03 13:36:48.278769 UTC, updated_at: 2026-01-03 13:36:48.278769 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591b7092e26d392c8acdd4')>
+Completed 502 Bad Gateway in 32ms (Views: 0.1ms | MongoDB: 25.4ms | GC: 1.0ms)
+[dotenv] Set [36mDEVISE_JWT_SECRET_KEY[0m, [36mTWILIO_ACCOUNT_SID[0m, [36mTWILIO_AUTH_TOKEN[0m, [36mTWILIO_TO_NUMBER[0m, [36mTWILIO_FROM_NUMBER[0m, [36mTWILIO_STATUS_CALLBACK_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:15 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:6 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:15 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:7 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:8 conn:1:1 sconn:15 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:8 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:9 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:9 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:10 conn:1:1 sconn:15 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591bf6bbd86e2f678280ec'), "email" => "test@example.com", "encrypted_password" => "$2a$12$xSJZYXlIU/gCJXsFTSTlRuVhdWwtFA3.eiq2vtrfmaUQNauW1V7Ei", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:10 | city_hive_messenger_test.insert | SUCCEEDED | 0.028s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:39:02 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:11 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:11 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:12 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591bf6bbd86e2f678280ec')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d...
+MONGODB | localhost:27017 req:12 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 200 OK in 35ms (Views: 0.2ms | MongoDB: 1.4ms | GC: 4.2ms)
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:15 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:13 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:14 conn:1:1 sconn:15 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:14 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:15 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:15 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:16 conn:1:1 sconn:15 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591bf7bbd86e2f678280ed'), "email" => "test@example.com", "encrypted_password" => "$2a$12$bvSFHSz0ZSLpQA93FRCXsu3nMFZhztQSTFlj161fw2or2iuaxx8l.", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:16 | city_hive_messenger_test.insert | SUCCEEDED | 0.027s
+MONGODB | localhost:27017 req:17 conn:1:1 sconn:15 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591bf7bbd86e2f678280ee'), "status" => "created", "to_number" => "+15555550001", "body" => "older", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:17 | city_hive_messenger_test.insert | SUCCEEDED | 0.025s
+MONGODB | localhost:27017 req:18 conn:1:1 sconn:15 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591bf7bbd86e2f678280ef'), "status" => "created", "to_number" => "+15555550002", "body" => "newer", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:18 | city_hive_messenger_test.insert | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:19 conn:1:1 sconn:15 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591bf7bbd86e2f678280ee')}, "u" => {"$set" => {"created_at" => 2026-01-01 13:39:03.325812 UTC, "updated_at" => 2026-01-03 13:39:03.327072 UTC}}}], "$db" => "c...
+MONGODB | localhost:27017 req:19 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:20 conn:1:1 sconn:15 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591bf7bbd86e2f678280ef')}, "u" => {"$set" => {"created_at" => 2026-01-02 13:39:03.332287 UTC, "updated_at" => 2026-01-03 13:39:03.335063 UTC}}}], "$db" => "c...
+MONGODB | localhost:27017 req:20 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:39:03 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:21 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:21 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:22 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591bf7bbd86e2f678280ed')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d...
+MONGODB | localhost:27017 req:22 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 200 OK in 13ms (Views: 0.1ms | MongoDB: 2.8ms | GC: 7.5ms)
+MONGODB | localhost:27017 req:23 conn:1:1 sconn:15 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:23 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:24 conn:1:1 sconn:15 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:24 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:25 conn:1:1 sconn:15 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:25 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:26 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:26 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:27 conn:1:1 sconn:15 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591bf7bbd86e2f678280f0'), "email" => "test@example.com", "encrypted_password" => "$2a$12$MGMo2GlWqATmr8lqwpvvaOuCBy7Nic.f7MVDlgSTywXU2tUa5lap2", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:27 | city_hive_messenger_test.insert | SUCCEEDED | 0.029s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:39:03 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:28 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:28 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:29 conn:1:1 sconn:15 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591bf7bbd86e2f678280f1'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:29 | city_hive_messenger_test.insert | SUCCEEDED | 0.025s
+B
+#<Message _id: 69591bf7bbd86e2f678280f1, created_at: 2026-01-03 13:39:03.609622 UTC, updated_at: 2026-01-03 13:39:03.609622 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591bf7bbd86e2f678280f0')>
+MONGODB | localhost:27017 req:30 conn:1:1 sconn:15 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591bf7bbd86e2f678280f1')}, "u" => {"$set" => {"twilio_sid" => "SM_TEST_123", "status" => "queued"}}}], "$db" => "city_hive_messenger_test", "lsid" => {"id" =...
+MONGODB | localhost:27017 req:30 | city_hive_messenger_test.update | SUCCEEDED | 0.002s
+Completed 201 Created in 36ms (Views: 0.1ms | MongoDB: 27.4ms | GC: 1.0ms)
+MONGODB | localhost:27017 req:31 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"_id" => BSON::ObjectId('69591bf7bbd86e2f678280f1')}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:31 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:32 conn:1:1 sconn:15 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:32 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:33 conn:1:1 sconn:15 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:33 | city_hive_messenger_test.drop | SUCCEEDED | 0.006s
+MONGODB | localhost:27017 req:34 conn:1:1 sconn:15 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:34 | city_hive_messenger_test.drop | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:35 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:35 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:36 conn:1:1 sconn:15 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591bf7bbd86e2f678280f2'), "email" => "test@example.com", "encrypted_password" => "$2a$12$FxMpyiLC3QhN/7Yz607ayu9zMgEN7AicXpzLpHovgmmm.4g0iWchm", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:36 | city_hive_messenger_test.insert | SUCCEEDED | 0.020s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:39:03 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "", "message" => {"to_number" => ""}}
+MONGODB | localhost:27017 req:37 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:37 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 502 Bad Gateway in 2ms (Views: 0.1ms | MongoDB: 0.6ms | GC: 0.0ms)
+MONGODB | localhost:27017 req:38 conn:1:1 sconn:15 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:38 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:39 conn:1:1 sconn:15 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:39 | city_hive_messenger_test.drop | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:40 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:40 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:41 conn:1:1 sconn:15 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591bf8bbd86e2f678280f3'), "email" => "test@example.com", "encrypted_password" => "$2a$12$jVYP17vzijYd89g1knWFRu8uCOJZyBM6fP3AN2RNgxS1Y5lTpbUY2", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:41 | city_hive_messenger_test.insert | SUCCEEDED | 0.020s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:39:04 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:42 conn:1:1 sconn:15 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0x9e62e78ece9d47d6...>}}
+MONGODB | localhost:27017 req:42 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:43 conn:1:1 sconn:15 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591bf8bbd86e2f678280f4'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:43 | city_hive_messenger_test.insert | SUCCEEDED | 0.023s
+B
+#<Message _id: 69591bf8bbd86e2f678280f4, created_at: 2026-01-03 13:39:04.163715 UTC, updated_at: 2026-01-03 13:39:04.163715 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591bf8bbd86e2f678280f3')>
+Completed 502 Bad Gateway in 29ms (Views: 0.1ms | MongoDB: 24.0ms | GC: 0.0ms)
+[dotenv] Set [36mDEVISE_JWT_SECRET_KEY[0m, [36mTWILIO_ACCOUNT_SID[0m, [36mTWILIO_AUTH_TOKEN[0m, [36mTWILIO_TO_NUMBER[0m, [36mTWILIO_FROM_NUMBER[0m, [36mTWILIO_STATUS_CALLBACK_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:18 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:6 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:7 conn:1:1 sconn:18 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:7 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:8 conn:1:1 sconn:18 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:8 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:9 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:9 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:10 conn:1:1 sconn:18 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591d4f9930e2de1640bdd8'), "email" => "test@example.com", "encrypted_password" => "$2a$12$EvW0.s/bt0KmoaNT3nt5SupfVfB3Uf0dwy/8sR1yFH7nkGc5z/Dp6", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:10 | city_hive_messenger_test.insert | SUCCEEDED | 0.032s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:44:47 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:11 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:11 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:12 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591d4f9930e2de1640bdd8')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d7426...
+MONGODB | localhost:27017 req:12 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 200 OK in 33ms (Views: 0.3ms | MongoDB: 1.5ms | GC: 0.0ms)
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:18 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:13 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:14 conn:1:1 sconn:18 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:14 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:15 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:15 | city_hive_messenger_test.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:16 conn:1:1 sconn:18 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591d4f9930e2de1640bdd9'), "email" => "test@example.com", "encrypted_password" => "$2a$12$DVyhTZg6exPYeLg1JJbJveMg3ch6gIvrmy2yYiBbaZjIsSOGihs7q", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:16 | city_hive_messenger_test.insert | SUCCEEDED | 0.119s
+MONGODB | localhost:27017 req:17 conn:1:1 sconn:18 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591d4f9930e2de1640bdda'), "status" => "created", "to_number" => "+15555550001", "body" => "older", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:17 | city_hive_messenger_test.insert | SUCCEEDED | 0.097s
+MONGODB | localhost:27017 req:18 conn:1:1 sconn:18 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591d4f9930e2de1640bddb'), "status" => "created", "to_number" => "+15555550002", "body" => "newer", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:18 | city_hive_messenger_test.insert | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:19 conn:1:1 sconn:18 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591d4f9930e2de1640bdda')}, "u" => {"$set" => {"created_at" => 2026-01-01 13:44:47.678399 UTC, "updated_at" => 2026-01-03 13:44:47.680607 UTC}}}], "$db" => "c...
+MONGODB | localhost:27017 req:19 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:20 conn:1:1 sconn:18 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591d4f9930e2de1640bddb')}, "u" => {"$set" => {"created_at" => 2026-01-02 13:44:47.684022 UTC, "updated_at" => 2026-01-03 13:44:47.684604 UTC}}}], "$db" => "c...
+MONGODB | localhost:27017 req:20 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+Started GET "/api/messages" for 127.0.0.1 at 2026-01-03 08:44:47 -0500
+Processing by Api::MessagesController#index as JSON
+MONGODB | localhost:27017 req:21 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:21 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:22 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"user_id" => BSON::ObjectId('69591d4f9930e2de1640bdd9')}, "limit" => 100, "sort" => {"created_at" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d7426...
+MONGODB | localhost:27017 req:22 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+Completed 200 OK in 5ms (Views: 0.1ms | MongoDB: 1.2ms | GC: 0.0ms)
+MONGODB | localhost:27017 req:23 conn:1:1 sconn:18 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:23 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.000s
+MONGODB | localhost:27017 req:24 conn:1:1 sconn:18 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:24 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:25 conn:1:1 sconn:18 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:25 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:26 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:26 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:27 conn:1:1 sconn:18 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591d4f9930e2de1640bddc'), "email" => "test@example.com", "encrypted_password" => "$2a$12$ZvwuXbpjwQ2ttK6XAEvU3eEgS.eKRdFIdCu9FRClp1klrjty83OHG", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:27 | city_hive_messenger_test.insert | SUCCEEDED | 0.030s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:44:47 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:28 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:28 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:29 conn:1:1 sconn:18 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591d4f9930e2de1640bddd'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:29 | city_hive_messenger_test.insert | SUCCEEDED | 0.020s
+B
+#<Message _id: 69591d4f9930e2de1640bddd, created_at: 2026-01-03 13:44:47.967552 UTC, updated_at: 2026-01-03 13:44:47.967552 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591d4f9930e2de1640bddc')>
+MONGODB | localhost:27017 req:30 conn:1:1 sconn:18 | city_hive_messenger_test.update | STARTED | {"update" => "messages", "ordered" => true, "updates" => [{"q" => {"_id" => BSON::ObjectId('69591d4f9930e2de1640bddd')}, "u" => {"$set" => {"twilio_sid" => "SM_TEST_123", "status" => "queued"}}}], "$db" => "city_hive_messenger_test", "lsid" => {"id" =...
+MONGODB | localhost:27017 req:30 | city_hive_messenger_test.update | SUCCEEDED | 0.001s
+Completed 201 Created in 27ms (Views: 0.1ms | MongoDB: 20.7ms | GC: 0.0ms)
+MONGODB | localhost:27017 req:31 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "messages", "filter" => {"_id" => BSON::ObjectId('69591d4f9930e2de1640bddd')}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:31 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:32 conn:1:1 sconn:18 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:32 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:33 conn:1:1 sconn:18 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:33 | city_hive_messenger_test.drop | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 req:34 conn:1:1 sconn:18 | city_hive_messenger_test.drop | STARTED | {"drop" => "messages", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:34 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:35 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:35 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:36 conn:1:1 sconn:18 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591d509930e2de1640bdde'), "email" => "test@example.com", "encrypted_password" => "$2a$12$QoFPnS/dRlNJoST1Fy4Wre5WeikJcF4m6FXAyv//etZ9eyiHCufl2", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:36 | city_hive_messenger_test.insert | SUCCEEDED | 0.019s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:44:48 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "", "message" => {"to_number" => ""}}
+MONGODB | localhost:27017 req:37 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:37 | city_hive_messenger_test.find | SUCCEEDED | 0.000s
+Completed 502 Bad Gateway in 2ms (Views: 0.1ms | MongoDB: 0.5ms | GC: 0.0ms)
+MONGODB | localhost:27017 req:38 conn:1:1 sconn:18 | city_hive_messenger_test.listCollections | STARTED | {"listCollections" => 1, "cursor" => {}, "nameOnly" => true, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:38 | city_hive_messenger_test.listCollections | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:39 conn:1:1 sconn:18 | city_hive_messenger_test.drop | STARTED | {"drop" => "users", "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:39 | city_hive_messenger_test.drop | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:40 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {"email" => "test@example.com"}, "limit" => 1, "projection" => {"_id" => 1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:40 | city_hive_messenger_test.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 req:41 conn:1:1 sconn:18 | city_hive_messenger_test.insert | STARTED | {"insert" => "users", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591d509930e2de1640bddf'), "email" => "test@example.com", "encrypted_password" => "$2a$12$zyeG.hUPYSMMdz0G/cQiWOfaq9dPnD34naID4ZH1uKOfX4li5KG/m", "updated_at" => 2026-...
+MONGODB | localhost:27017 req:41 | city_hive_messenger_test.insert | SUCCEEDED | 0.021s
+Started POST "/api/messages" for 127.0.0.1 at 2026-01-03 08:44:48 -0500
+Processing by Api::MessagesController#create as JSON
+  Parameters: {"to_number" => "+15555551212", "body" => "Hello", "message" => {"to_number" => "+15555551212", "body" => "Hello"}}
+MONGODB | localhost:27017 req:42 conn:1:1 sconn:18 | city_hive_messenger_test.find | STARTED | {"find" => "users", "filter" => {}, "limit" => 1, "sort" => {"_id" => -1}, "$db" => "city_hive_messenger_test", "lsid" => {"id" => <BSON::Binary:0x5656 type=uuid data=0xfa67f8d0e2d74260...>}}
+MONGODB | localhost:27017 req:42 | city_hive_messenger_test.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:43 conn:1:1 sconn:18 | city_hive_messenger_test.insert | STARTED | {"insert" => "messages", "ordered" => true, "documents" => [{"_id" => BSON::ObjectId('69591d509930e2de1640bde0'), "status" => "created", "to_number" => "+15555551212", "body" => "Hello", "from_number" => "+15551234567", "user_id" => BSON::ObjectId('69...
+MONGODB | localhost:27017 req:43 | city_hive_messenger_test.insert | SUCCEEDED | 0.020s
+B
+#<Message _id: 69591d509930e2de1640bde0, created_at: 2026-01-03 13:44:48.596885 UTC, updated_at: 2026-01-03 13:44:48.596885 UTC, to_number: "+15555551212", from_number: "+15551234567", body: "Hello", twilio_sid: nil, status: "created", error_code: nil, user_id: BSON::ObjectId('69591d509930e2de1640bddf')>
+Completed 502 Bad Gateway in 33ms (Views: 0.1ms | MongoDB: 20.6ms | GC: 1.1ms)
