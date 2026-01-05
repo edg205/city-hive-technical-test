@@ -20,13 +20,22 @@ class Message
 
   def normalize_phone
     return unless to_number.present?
-    self.to_number = to_number.gsub(/[^\d+]/, '')
+
+    raw = to_number.strip
+    return unless raw.start_with?('+')
+
+    self.to_number = "+#{raw.gsub(/\D/, '')}"
   end
 
 
-  validates_format_of :to_number,
-                      with: /\A[1-9]\d{9,14}\z/,
-                      message: "must be in E.164 format (e.g. +15555551212)"
+
+
+  validates :to_number,
+            format: {
+              with: /\A\+[1-9]\d{9,14}\z/,
+              message: "must be in E.164 format (e.g. +15555551212)"
+            }
+
 
 
   belongs_to :user
